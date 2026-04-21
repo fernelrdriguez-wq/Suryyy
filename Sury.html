@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> PARA SURY ❤️</title>
+  <style>
+    body {
+      /* Se aplica Arial y Negrita a todo el cuerpo */
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      text-align: center;
+      background: linear-gradient(to right, #7216a3bb, #5a118f);
+      color: white; /* Cambiado a blanco para mejor contraste con el fondo púrpura */
+      padding: 50px;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    button {
+      font-size: 1.5em;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #yes {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #no {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+    #proposal {
+      display: none;
+    }
+    audio {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Primera pantalla -->
+  <div id="intro">
+    <h1> PARA EL AMOR DE MI VIDA❤️‍🩹</h1>
+    <p>
+      Sury te quiero decir que te amo mucho, sos esa persona de Dios puso en mi vida en el momento que menos me queria y estaba pasando un momento muy dificil. Te amo por tu forma de ser,
+      te amo por tu amor  Dios, amo esa sonrisa y esos ojistos que me iluminan con solo verte el sabado me di cuenta que vos esa persona que quiero tener en mi vida por siempre ir a la iglesia juntos, construir un futuro juntos,
+      tener mis hijos con vos y pues no me salen muchas palabras para expresar el amor que te tengo. TE AMO UN MONTONNNN 💖<br><br>
+      Te amo mucho, más de lo que puedo explicar con palabras...
+    </p>
+
+    <button onclick="showProposal()">Siguiente ➡️</button>
+  </div>
+
+  <!-- Segunda pantalla -->
+  <div id="proposal">
+    <h1>💖 ¿Quieres ser mi novia? 💖</h1>
+
+    <button id="yes" onclick="accept()">Sí 💕</button>
+    <button id="no" onmouseover="moveButton()">No 😢</button>
+  </div>
+
+  <audio controls autoplay loop>
+     <source src="Alvaro Diaz - Yoko (Official Video).mp3">
+     
+    </audio>
+
+  <script>
+    function showProposal() {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('proposal').style.display = 'block';
+    }
+
+    function accept() {
+      alert("¡TE AMO TRES MILLONES! 💖");
+    }
+
+    function moveButton() {
+      const button = document.getElementById('no');
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      button.style.left = x + 'px';
+      button.style.top = y + 'px';
+    }
+  </script>
+
+</body>
+</html>
